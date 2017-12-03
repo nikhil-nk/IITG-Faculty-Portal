@@ -1,0 +1,66 @@
+
+        {% load staticfiles %}
+
+{% block title %}Log In{% endblock %}
+{% block login_active %}active{% endblock %}
+
+<link rel="stylesheet" href="{% static 'prof/bootstrap.min.css' %}" />
+<title>Shadow Login Form a Flat Responsive Widget Template :: w3layouts</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Shadow Login Form template Responsive, Login form web template,Flat Pricing tables,Flat Drop downs  Sign up Web Templates, Flat Web Templates, Login sign up Responsive web template, SmartPhone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- Custom Theme files -->
+<link href="{% static 'prof/loginTemplate/css/style.css' %}" rel="stylesheet" type="text/css" media="all" />
+<!-- //Custom Theme files -->
+<!-- web font -->
+<link href="//fonts.googleapis.com/css?family=Cormorant+Garamond:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Arsenal:400,400i,700,700i" rel="stylesheet">
+<!-- //web font -->
+	<!-- main -->
+    {% block body %}
+
+	<div class="main-agileinfo slider ">
+		<div class="items-group">
+			<div class="item agileits-w3layouts">
+				<div class="block text main-agileits">
+					<!--<span class="circleLight"></span>-->
+					<!-- login form -->
+					<div class="login-form loginw3-agile">
+						<div class="agile-row">
+							<h1>Login Form</h1>
+							<div class="login-agileits-top">
+                                {% if error_message %}
+                                    <p><strong>{{ error_message }}</strong></p>
+                                {% endif %}
+								<form action="{% url 'prof:login_user' %}" role="form" method="post" enctype="multipart/form-data">
+								{% csrf_token %}
+									<p>User Name </p>
+									<input id="id_username" type="text" class="name" name="username"/>
+									<p>Password</p>
+									<input id="id_password" type="password" class="password" name="password"/>
+									<!--<label class="anim">-->
+										<!--<input type="checkbox" class="checkbox">-->
+										<!--<span> Remember me ?</span>-->
+									<!--</label>-->
+									<br><hr><script src='https://www.google.com/recaptcha/api.js'></script>
+    <div class="g-recaptcha" data-sitekey="6Lfk3ToUAAAAAHSDTAZLbuuzLR28hoshotm3AbqD"></div><hr>
+									<br><br>
+                                    <button class="btn btn-lg btn-success" type="submit">submit</button>
+								</form>
+							</div>
+							<div class="login-agileits-bottom wthree">
+							    <h6>
+                                Don't have an account? <a href="{% url 'prof:register' %}">Click here</a> to register.
+                            </h6>
+                            </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	{% endblock %}
+	<!-- //main -->
+</body>
+</html>

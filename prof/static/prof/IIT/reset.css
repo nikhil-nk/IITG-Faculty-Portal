@@ -1,0 +1,57 @@
+/*reset stylesheet-- from http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/*/
+
+html, body, div, span, applet, object, iframe,
+ p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em,  img, ins, kbd, q, s, samp,
+small, strike, sub, sup, tt, var,
+
+/*fieldset, form, label, legend,*/
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: Arial, Helvetica, sans-serif;
+	vertical-align: baseline;
+   
+    font-size: 13px;
+    line-height: 18px;
+	text-decoration:none;
+	outline:none;
+	
+}
+a:focus{
+	outline:none;
+	text-decoration:none;
+	}
+
+.ei-slider dl, .ei-slider dt, .ei-slider dd, .ei-slider ol, .ei-slider ul, .ei-slider li{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: Arial, Helvetica, sans-serif;
+	vertical-align: baseline;
+}
+
+
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+body {
+	
+	
+}
+/*ol, ul {
+	list-style: none;
+	line-height: 1;
+}
+*/

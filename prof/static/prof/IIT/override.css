@@ -1,0 +1,184 @@
+@charset "utf-8";
+/* CSS Document */
+body
+{
+	background:none repeat scroll 0 0 #000000;
+	color:#FF0 !important;
+}
+/*Outer div classes starts here -------------------------------*/
+.recognition {
+    background: #000 none repeat scroll 0 0;
+    color: #FF0;
+}
+.overview a,visited{
+	color:#DBDBDB;
+	}
+.new_area2,visited{
+	background-color:#000;
+	}
+.home_page_news_heading p,visited{
+	color:#DBDBDB;
+	
+	}	
+.vision { background:#000; color:#FF0;}
+.vision h3 { color:#FF0;}
+.learn { background:#000; color:#FF0;}
+.learn h3 { color:#FF0;}
+.about_area_1 { background:#000; color:#FF0;}
+.about_area_1 h3 { color:#FF0;}
+.deptlink_area { background:#000; color:#FF0;}
+.deptlink_area a,visited { color:#FF0;}
+.publication { background:#000; color:#FF0;}
+.publication h3 { color:#FF0;}
+.button_st1,.button_st2 {background:#000; color:#FF0;}
+
+.deptchemistry_area {background: #000 none repeat scroll 0 0; color: #FF0;
+}
+.deptchemistry_area h1 { color:#FF0; font-weight:600; border-color:#FF0;}
+.faculty {width:auto; position:relative;}
+.faculty h3 { color:#FFF;}
+.faculty a,visited { font-size:16px; color:#FF0;}
+.faculty_right h3 { color:#FFF; font-weight:500; font-size:18px; margin:0px; padding:0px;}
+
+.individual_faculty {background:#000; color:#FF0;}
+.f_profile { background:#000; color:#FF0;}
+.research_area { background:#000; color:#FFF;}
+.research_area h3 {color:#FF0;}
+
+.new_area {
+    background: #000 none repeat scroll 0 0;
+    border-radius: 28px 0 0;
+    color: #FF0;
+    margin: 25px 0 12px;
+    padding: 28px 19px 10px;
+}
+.topheader {
+    background: #000 none repeat scroll 0 0;
+    color: #FF0;
+    padding: 10px 0 0;
+}
+.top_text_area {
+    background: #000 none repeat scroll 0 0;
+    color: #ffffff;
+	border-top:1px solid #FF0;
+}
+.top_text_area a{
+	color: #ffffff;
+    font-size: 16px;
+}
+.down_text_area {
+    background: #000 none repeat scroll 0 0;
+    color: #ffffff;
+	border-bottom:1px solid #FF0;
+}
+.text_only_area{
+	background: #000;
+    color: #fff;
+    padding: 12px 10px;}
+	
+.text_only_area a{color: #FF0;
+    font-size: 37px;
+	line-height: 40px;
+}
+.upfooter{background:#000; color:#fff; margin-top:-6px; }
+.footer_bg{background:#000;}
+.footer_bg a,visited { color:#FF0;}
+.footer_bg li a,visited { color: #DBDBDB;}
+.removep p,visited{
+	color: #DBDBDB;
+	}
+a.black,visited {
+	color: #FF0;
+	text-decoration: none;
+	font-weight: normal;
+}
+a.black:hover {
+	text-decoration: none;
+}
+.newssection a,visited{color: #DBDBDB;}	
+.in_mar2,visited{background-color:transparent; color: #DBDBDB;}	
+.home_page_news_heading,visited{
+	
+	background-color:rgba(51,51,51,1);
+	
+	}
+.about_content_area,visited{
+	color:#fff;
+}
+.about_content_area,visited{
+	background-color:rgba(0,0,0,1);
+	
+	}
+.r-tabs .r-tabs-panel {
+    background-color: black;
+    border-bottom: 4px solid white;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+.event_left_menu_area,visited{
+	
+	background-color:#1F1F1F;
+	}
+.news_anno,visited {
+    background: #0A0A0A none repeat scroll 0 0;
+    border-radius: 28px 0 0;
+    color: #FFFFFF;
+    margin: 25px 0 12px;
+    padding: 28px 19px 10px;
+    height: auto;
+}
+ul.deep01 li a {
+    color: #FF0;
+    font-weight: bold;
+    text-decoration: none;
+}
+.in_mar {
+    background: #000 none repeat scroll 0 0;
+    color: #FF0;
+    height:20px;
+    margin: 12px 0;
+    padding: 0;
+}
+#scrollbar5 .viewport,visited {
+    height: 50px;
+    overflow: hidden;
+    position: relative;
+    margin-top: 6px;
+}
+.gsc-control-cse {
+    font-family: Georgia, serif;
+    background-color:transparent !important;
+    border: 0px solid #ffffff !important;
+}
+h4 {
+    color: #EAEA48 !important;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 0;
+}
+
+.quicklinks {
+    background: #000 none repeat scroll 0 0;
+    border-radius: 28px 0 0;
+    color: #FF0;
+    height: 401px;
+    margin: 25px 0 12px;
+    padding: 28px 19px;
+}
+ul.deep01 li a {
+    color:#EAEA48;
+    font-weight: bold;
+}
+.topheader a {
+    color: #FF0;
+}
+
+.header_pannel_right a.border {
+    background: #000 none repeat scroll 0 0;
+    border-radius: 50%;
+    color: #FF0;
+    display: inline-block;
+    height: 20px;
+    text-align: center;
+    width: 20px;
+}

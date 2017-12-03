@@ -1,0 +1,382 @@
+
+
+{% load staticfiles %}
+
+
+<link rel="stylesheet" href="{% static 'prof/bootstrap.min.css' %}" />
+<link rel="stylesheet" href="{% static 'prof/animate.min.css' %}" />
+<link rel="stylesheet" href="{% static 'prof/light-bootstrap-dashboard.css' %}" />
+<link rel="stylesheet" href="{% static 'prof/demo.css' %}" />
+<link rel="stylesheet" href="{% static 'prof/pe-icon-7-stroke.css' %}" />
+
+<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+
+
+
+
+
+
+<script src="{% static 'prof/js/jquery.3.2.1.min.js" type="text/javascript"></script>
+<script src="{% static 'prof/js/bootstrap.min.js" type="text/javascript"></script>
+
+	<!--&lt;!&ndash;  Charts Plugin &ndash;&gt;-->
+<script src="{% static 'prof/js/chartist.min.js'%}"></script>
+
+    <!--&lt;!&ndash;  Notifications Plugin    &ndash;&gt;-->
+<script src="{% static 'prof/js/bootstrap-notify.js'%}"></script>
+
+    <!--&lt;!&ndash;  Google Maps Plugin    &ndash;&gt;-->
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+
+    <!--&lt;!&ndash; Light Bootstrap Table Core javascript and methods for Demo purpose &ndash;&gt;-->
+<script src="{% static 'prof/js/light-bootstrap-dashboard.js'%}"></script>
+
+	<!--&lt;!&ndash; Light Bootstrap Table DEMO methods, don't include it in your project! &ndash;&gt;-->
+<script src="{% static 'prof/js/demo.js'%}"></script>
+
+
+
+
+
+
+
+
+<!--<html lang="en">-->
+<!--<head>-->
+	<!--<meta charset="utf-8" />-->
+	<!--<link rel="icon" type="image/png" href="assets/img/favicon.ico">-->
+	<!--<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />-->
+
+	<!--<title> Bootstrap Dashboard </title>-->
+
+	<!--<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />-->
+    <!--<meta name="viewport" content="width=device-width" />-->
+
+
+    <!-- Bootstrap core CSS     -->
+    <!--<link href="assets/css/bootstrap.min.css" rel="stylesheet" />-->
+
+    <!-- Animation library for notifications   -->
+    <!--<link href="assets/css/animate.min.css" rel="stylesheet"/>-->
+
+    <!--  Light Bootstrap Table core CSS    -->
+    <!--<link href="assets/css/light-bootstrap-dashboard.css?v=1.4.0" rel="stylesheet"/>-->
+
+
+    <!--  CSS for Demo Purpose, don't include it in your project     -->
+    <!--<link href="assets/css/demo.css" rel="stylesheet" />-->
+
+
+    <!--     Fonts and icons     -->
+    <!--<link href="assets/css/pe-icon-7-stroke.css" rel="stylesheet" />-->
+    <style>
+        ::-webkit-input-placeholder {
+        color:    #D7DBDD;
+        }
+        :-moz-placeholder {
+           color:    #D7DBDD;
+           opacity:  1;
+        }
+        ::-moz-placeholder {
+           color:    #D7DBDD;
+           opacity:  1;
+        }
+        :-ms-input-placeholder {
+           color:    #D7DBDD;
+        }
+        ::-ms-input-placeholder {
+           color:    #D7DBDD;
+        }
+        select:required:invalid {
+            color: #D7DBDD;
+        }
+        option[value=""][disabled] {
+            display: none;
+        }
+        option {
+            color: black;
+        }
+        select::-ms-expand {
+            display: none;
+        }
+        select {
+            -webkit-appearance: none;
+            /* -moz-appearance: none; */
+        }
+        select:hover {
+            -webkit-appearance: menulist;
+        }
+    </style>
+<!--</head>-->
+<!--<body>-->
+
+<div class="wrapper">
+    <div class="sidebar" data-color="purple" data-image="assets/img/sidebar-5.jpg">
+
+    <!--   you can change the color of the sidebar using: data-color="blue | azure | green | orange | red | purple" -->
+
+
+    	<div class="sidebar-wrapper">
+            <div class="logo">
+                <a href="http://intranet.iitg.ernet.in/" target="_blank" class="simple-text">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/1/12/IIT_Guwahati_Logo.svg/445px-IIT_Guwahati_Logo.svg.png" alt="IIT_Guwahati_Logo" height="200px">
+                </a>
+            </div>
+
+            <ul class="nav">
+                <li>
+                    <a href="{% url 'prof:dashboard' prof.id %}">
+                        <i class="pe-7s-graph"></i>
+                        <p>Dashboard</p>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="{% url 'prof:my_profile' prof.id %}">
+                        <i class="pe-7s-user"></i>
+                        <p>User Profile</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'prof:education' prof.id %}">
+                        <i class="pe-7s-note2"></i>
+                        <p>Education</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'prof:experience' prof.id %}">
+                        <i class="pe-7s-news-paper"></i>
+                        <p>Experience</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'prof:projects' prof.id %}">
+                        <i class="pe-7s-science"></i>
+                        <p>Projects</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'prof:courses' prof.id %}">
+                        <i class="pe-7s-note"></i>
+                        <p>Courses</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'prof:students' prof.id %}">
+                        <i class="pe-7s-study"></i>
+                        <p>Students</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'prof:publication' prof.id %}">
+                        <i class="pe-7s-notebook"></i>
+                        <p>Publications</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'prof:awards' prof.id %}">
+                        <i class="pe-7s-medal"></i>
+                        <p>Awards & Recognitions</p>
+                    </a>
+                </li>
+            </ul>
+    	</div>
+    </div>
+
+    <div class="main-panel">
+		<nav class="navbar navbar-default navbar-fixed">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example-2">
+                        <span class="sr-only">Toggle navigation</span>
+
+                    </button>
+                    <a class="navbar-brand" href="#">Profile</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-left">
+
+
+                        <li>
+                            <a href="{% url 'prof:index' %}">HOME</a>
+                        </li>
+
+
+                    </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+
+
+
+                        <li>
+                            <a href="{% url 'prof:logout_user'%}">
+                                <p>Log out</p>
+                            </a>
+                        </li>
+                        <li class="separator hidden-lg hidden-md"></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="card">
+                            <div class="header">
+                                <h4 class="title">Edit Profile</h4>
+                            </div>
+                            <div class="content">
+                                <form action="{% url  'prof:my_profile1' prof.id %}" method="post">
+                                    {% csrf_token %}
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label>First Name</label>
+                                                <input name="first_name" type="text" class="form-control" placeholder="First Name" value="">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label>Middle Name</label>
+                                                <input name="middle_name" type="text" class="form-control" placeholder="Middle Name" value="">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label>Last Name</label>
+                                                <input name="last_name" type="text" class="form-control" placeholder="Last Name" value="">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-5">
+                                            <div class="form-group">
+                                                <label>Department</label><br>
+                                                <select name="department" required class="Department" name="Department" style="width:100%; height:40px; border-radius:6px; padding:5px 12px 5px; border: 1px solid #E5E7E9;" >
+                                                    <option value="" selected>Select Department</option>
+                                                    <option value="Biosciences & Bioengineering">Biosciences & Bioengineering</option>
+                                                    <option value="Chemical Engineering">Chemical Engineering</option>
+                                                    <option value="Chemistry">Chemistry</option>
+                                                    <option value="Civil Engineering">Civil Engineering</option>
+                                                    <option value="Computer Science & Engineering">Computer Science & Engineering</option>
+                                                    <option value="Design">Design</option>
+                                                    <option value="Electronics & Electrical Engineering">Electronics & Electrical Engineering</option>
+                                                    <option value="Humanities and Social Science">Humanities and Social Science</option>
+                                                    <option value="Mathematics">Mathematics</option>
+                                                    <option value="Mechanical Engineering">Mechanical Engineering</option>
+                                                    <option value="Other">Other</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5">
+                                            <div class="form-group">
+                                                <label>Designation</label>
+                                                <select name="designation" required class="Designation"  style="width:100%; height:40px; border-radius:6px; padding:5px 12px 5px; border: 1px solid #E5E7E9;" >
+                                                    <option value="" selected >Select Designation</option>                                                        
+                                                    <option value="Head of Dept.">Head of Dept.</option>
+                                                    <option value="Professor">Professor</option>
+                                                    <option value="Associate Professor">Associate Professor</option>
+                                                    <option value="Assistant Professor">Assistant Professor</option>
+                                                    </select>
+                                             </div>
+                                        </div>
+                                        
+                                    </div>
+
+                                   
+
+                                    <div class="row">
+                                        <div class="col-md-7">
+                                            <div class="form-group">
+                                                <label>Email address</label>
+                                                <input name="email" type="email" class="form-control" placeholder="Email">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5">
+                                            <div class="form-group">
+                                                <label>Office Address</label>
+                                                <input name="office" type="text" class="form-control" placeholder="Office Number" >
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label>Residence</label>
+                                                <input name="residence" type="text" class="form-control" placeholder="Quarter No." value="">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label>Institute</label>
+                                                <input name="university" type="text" class="form-control" placeholder="institute" value="IIT Guwahati" disabled>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label>Phone No.</label>
+                                                <input name="phone" type="number" class="form-control" min="0000" placeholder="Office Extension number">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>Research Interest</label>
+                                                <textarea name="about_me" rows="5" class="form-control" placeholder="Here can be your description" value=""></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <input type="submit" value="Update Profile" class="btn btn-info btn-fill pull-right"/>
+                                    <div class="clearfix"></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card card-user">
+                            <div class="image">
+                                <img src="https://f4.bcbits.com/img/a2461492887_16.jpg" alt="..."/>
+                                <!--<img src="prof/images/grey.jpg"/>-->
+                            </div>
+                            <div class="content">
+                                <div class="author">
+                                     <a href="#">
+                                    <img class="avatar border-gray" src="assets/img/faces/face-3.jpg" alt="..."/>
+
+                                      <h4 class="title">{{ prof.first_name }} {{ prof.last_name }}<br />
+                                         <small>{{ prof.designation }}</small>
+                                      </h4>
+                                    </a>
+                                </div>
+                                <p class="description text-center">              
+                                </p>
+                            </div>
+                            <hr>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <footer class="footer">
+            <div class="container-fluid">
+                <nav class="pull-left">
+                </nav>
+            </div>
+        </footer>
+
+    </div>
+</div>
+
+
